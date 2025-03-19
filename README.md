@@ -13,7 +13,7 @@ Welcome to the **Secret Buddy Challenge**! This is an interactive game that allo
 
 # Demostration / Demo
 
-You can give the project a try at the following link: [**Demo**](https://github.com/GaBorrero/challenge-secret-buddy-amigo-secreto/). / Puedes probar el proyecto en el siguiente enlace: [**Demo**](https://github.com/GaBorrero/challenge-secret-buddy-amigo-secreto/)
+You can give the project a try at the following link: [**Demo**](https://GaBorrero.github.io/challenge-secret-buddy-amigo-secreto/). / Puedes probar el proyecto en el siguiente enlace: [**Demo**](https://GaBorrero.github.io/challenge-secret-buddy-amigo-secreto/).
 
 # Challenge Structure / Estructura del Desafío
 
