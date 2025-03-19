@@ -30,7 +30,7 @@ body {
     width: 100%;
 }
 
-/* Banner principal*/
+/* Banner */
 .header-banner {
     flex: 40%;
     display: flex;
@@ -39,7 +39,7 @@ body {
     padding: 40px 0 0;
 }
 
-/* Seccion inicial */
+/* Sección de entrada */
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
@@ -52,7 +52,7 @@ body {
     width: 100%;
 }
 
-/* Titulos */
+/* Títulos */
 .main-title {
     font-size: 48px;
     font-family: "Merriweather", serif;
@@ -70,7 +70,7 @@ body {
     text-align: center;
 }
 
-/* Contenedores */
+/* Contenedores de entrada y botón */
 .input-wrapper {
     display: flex;
     justify-content: center;
@@ -92,7 +92,7 @@ body {
     justify-content: center;
 }
 
-/* Estilos de texto incial*/
+/* Estilos de entrada de texto */
 .input-title {
     flex: 1;
     padding: 10px 15px;
@@ -104,7 +104,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos del boton */
+/* Estilos de botón */
 button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
@@ -147,7 +147,7 @@ ul li {
     white-space: nowrap;
 }
 
-/* Sorteo */
+/* Resultado del sorteo */
 .result-list {
     margin-top: 15px;
     color: #05DF05;
@@ -156,7 +156,7 @@ ul li {
     text-align: center;
 }
 
-/* Boton sorteo */
+/* Botón de sortear título */
 .button-draw {
     display: flex;
     align-items: center;
@@ -175,7 +175,7 @@ ul li {
     background-color: var(--color-button-hover);
 }
 
-/* Notificaciones */
+/* Contenedor de notificaciones */
 .notificaciones {
     position: fixed;
     top: 20px;
@@ -186,7 +186,7 @@ ul li {
     gap: 10px;
 }
 
-/* Estilo seleccionado */
+/* Estilo para el amigo seleccionado durante la animación */
 .amigo-seleccionado {
     background-color: #FFD700; /* Amarillo */
     color: #000; /* Negro */
@@ -210,11 +210,11 @@ ul li {
     animation: fadeIn 0.5s ease;
 }
 
-/* Botón cerrar notificacion*/
+/* Botón para cerrar la notificación */
 .notificacion button.cerrar-notificacion {
     background: none;
     border: none;
-    color: inherit;
+    color: inherit; /* Hereda el color de la notificación */
     font-size: 16px;
     cursor: pointer;
     margin-left: 10px;
