@@ -1,8 +1,8 @@
-# Secret Buddy Project / Proyecto Amigo Secreto
+# Secret Buddy Challenge / Desafío Amigo Secreto
 
-Welcome to the **Secret Buddy Project**! This is an interactive game that allows users to add names and perform random draws among them. The project used technologies such as HTML, CSS, and JavaScript, and it runs from any web browser.
+Welcome to the **Secret Buddy Challenge**! This is an interactive game that allows users to add names and perform random draws among them. The project used technologies such as HTML, CSS, and JavaScript, and it runs from any web browser.
 
-¡ Bienvenido al proyecto **Amigo Secreto**! Este es un juego interactivo que permite a los usuarios agregar nombres y realizar el sorteo de manera aleatoria entre los nombres agregados. En el proyecto se usaron tecnologías como HTML, CSS y JavaScript, y se ejectuta desde cualquier navegador.
+¡ Bienvenido al desafío **Amigo Secreto**! Este es un juego interactivo que permite a los usuarios agregar nombres y realizar el sorteo de manera aleatoria entre los nombres agregados. En el proyecto se usaron tecnologías como HTML, CSS y JavaScript, y se ejectuta desde cualquier navegador.
 
 # Features / Características
 
@@ -13,13 +13,13 @@ Welcome to the **Secret Buddy Project**! This is an interactive game that allows
 
 # Demostration / Demo
 
-You can give the project a try at the following link: [**Demo**](https://github.com/GaBorrero/challenge-amigo-secreto/). / Puedes probar el proyecto en el siguiente enlace: [**Demo**](https://github.com/GaBorrero/challenge-amigo-secreto/)
+You can give the project a try at the following link: [**Demo**](https://github.com/GaBorrero/challenge-secret-buddy-amigo-secreto/). / Puedes probar el proyecto en el siguiente enlace: [**Demo**](https://github.com/GaBorrero/challenge-secret-buddy-amigo-secreto/)
 
-# Project Structure / Estructura del Proyecto
+# Challenge Structure / Estructura del Desafío
 
-The project is organized as follows: / El proyecto está organizado de la siguiente manera:
+The challenge is organized as follows: / El desafío está organizado de la siguiente manera:
 
-**challenge-amigo-secreto/**
+**challenge-secret-buddy-amigo-secreto**
 - **assets/**
   - `amigo-secreto.png`: Main banner image. / Imagen del banner principal.
   - `play_circle_outline.png`: Draw button icon. / Ícono para el botón de sorteo.
@@ -46,7 +46,7 @@ Enjoy the result and restart the game any time you want. / Disfruta del resultad
 
 # License / Licencia
 
-This project is under the [MIT](https://opensource.org/licenses/MIT) license. Feel free to use, modify, and share it. / Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT). Siéntete libre de usarlo, modificarlo y compartirlo.
+This challenge is under the [MIT](https://opensource.org/licenses/MIT) license. Feel free to use, modify, and share it. / Este desafío está bajo la licencia [MIT](https://opensource.org/licenses/MIT). Siéntete libre de usarlo, modificarlo y compartirlo.
 
 # Contributions / Contribuciones
 
