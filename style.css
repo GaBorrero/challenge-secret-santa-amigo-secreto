@@ -132,8 +132,22 @@ ul {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
 }
 
+ul li {
+    padding: 5px 10px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-tertiary);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+/* Sorteo */
 .result-list {
     margin-top: 15px;
     color: #05DF05;
@@ -142,7 +156,7 @@ ul {
     text-align: center;
 }
 
-/* Botón sortear */
+/* Boton sorteo */
 .button-draw {
     display: flex;
     align-items: center;
@@ -159,4 +173,53 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+/* Notificaciones */
+.notificaciones {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo seleccionado */
+.amigo-seleccionado {
+    background-color: #FFD700; /* Amarillo */
+    color: #000; /* Negro */
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo de las notificaciones */
+.notificacion {
+    background-color: var(--color-white);
+    color: var(--color-text);
+    border: 1px solid var(--color-tertiary);
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Botón cerrar notificacion*/
+.notificacion button.cerrar-notificacion {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.notificacion button.cerrar-notificacion:hover {
+    color: var(--color-primary);
 }
