@@ -1,25 +1,19 @@
-// Declarar el array para almacenar los nombres de los amigos
+// Array
 let amigos = [];
-let amigosSorteados = []; // Lista para almacenar los amigos ya sorteados
+let amigosSorteados = [];
 
-// Función para mostrar notificaciones con sonido
+// Notificaciones
 function mostrarNotificacion(mensaje, tipo = "info") {
     const contenedor = document.getElementById("notificaciones");
     const notificacion = document.createElement("div");
     notificacion.classList.add("notificacion");
 
-    // Seleccionar el sonido según el tipo
-    const sonidoExito = document.getElementById("sonidoExito");
-    const sonidoError = document.getElementById("sonidoError");
-
     if (tipo === "error") {
         notificacion.style.backgroundColor = "#FFCCCC";
         notificacion.style.color = "#D8000C";
-        sonidoError.play(); // Reproducir sonido de error
     } else if (tipo === "success") {
         notificacion.style.backgroundColor = "#DFF2BF";
         notificacion.style.color = "#4F8A10";
-        sonidoExito.play(); // Reproducir sonido de éxito
     }
 
     notificacion.innerHTML = `
@@ -34,7 +28,6 @@ function mostrarNotificacion(mensaje, tipo = "info") {
     }, 3000);
 }
 
-// Función para agregar amigos
 function agregarAmigo() {
     const inputAmigo = document.getElementById("amigo");
     const nombreAmigo = inputAmigo.value.trim();
@@ -61,7 +54,6 @@ function agregarAmigo() {
     mostrarNotificacion("Amigo agregado correctamente.", "success");
 }
 
-// Función para actualizar la lista de amigos
 function actualizarListaAmigos() {
     const listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = "";
@@ -70,7 +62,7 @@ function actualizarListaAmigos() {
         const li = document.createElement("li");
         li.textContent = amigo;
 
-        // Si el amigo ya fue sorteado, se deshabilita visualmente
+        // Nombre sorteado
         if (amigosSorteados.includes(amigo)) {
             li.style.textDecoration = "line-through";
             li.style.color = "#C4C4C4";
