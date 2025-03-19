@@ -1,6 +1,6 @@
-# Secret Buddy Challenge / Desafío Amigo Secreto
+# Secret Santa Challenge / Desafío Amigo Secreto
 
-Welcome to the **Secret Buddy Challenge**! This is an interactive game that allows users to add names and perform random draws among them. The project used technologies such as HTML, CSS, and JavaScript, and it runs from any web browser.
+Welcome to the **Secret Santa Challenge**! This is an interactive game that allows users to add names and perform random draws among them. The project used technologies such as HTML, CSS, and JavaScript, and it runs from any web browser.
 
 ¡ Bienvenido al desafío **Amigo Secreto**! Este es un juego interactivo que permite a los usuarios agregar nombres y realizar el sorteo de manera aleatoria entre los nombres agregados. En el proyecto se usaron tecnologías como HTML, CSS y JavaScript, y se ejectuta desde cualquier navegador.
 
@@ -13,13 +13,13 @@ Welcome to the **Secret Buddy Challenge**! This is an interactive game that allo
 
 # Demostration / Demo
 
-You can give the project a try at the following link: [**Demo**](https://GaBorrero.github.io/challenge-secret-buddy-amigo-secreto/). / Puedes probar el proyecto en el siguiente enlace: [**Demo**](https://GaBorrero.github.io/challenge-secret-buddy-amigo-secreto/).
+You can give the project a try at the following link: [**Demo**](https://GaBorrero.github.io/challenge-secret-santa-amigo-secreto/). / Puedes probar el proyecto en el siguiente enlace: [**Demo**](https://GaBorrero.github.io/challenge-secret-santa-amigo-secreto/).
 
 # Challenge Structure / Estructura del Desafío
 
 The challenge is organized as follows: / El desafío está organizado de la siguiente manera:
 
-**challenge-secret-buddy-amigo-secreto**
+**challenge-secret-Santa-amigo-secreto**
 - **assets/**
   - `amigo-secreto.png`: Main banner image. / Imagen del banner principal.
   - `play_circle_outline.png`: Draw button icon. / Ícono para el botón de sorteo.
