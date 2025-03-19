@@ -33,25 +33,25 @@ function agregarAmigo() {
     const nombreAmigo = inputAmigo.value.trim();
 
     if (nombreAmigo === "") {
-        mostrarNotificacion("Por favor, inserte un nombre.", "error");
+        mostrarNotificacion("Escriba un nombre:", "error");
         return;
     }
 
     const regexSoloTexto = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
     if (!regexSoloTexto.test(nombreAmigo)) {
-        mostrarNotificacion("El nombre solo debe contener letras y caracteres válidos.", "error");
+        mostrarNotificacion("El nombre solo puede contener letras.", "error");
         return;
     }
 
     if (amigos.includes(nombreAmigo)) {
-        mostrarNotificacion("Este nombre ya ha sido agregado.", "error");
+        mostrarNotificacion("Este nombre ya se encuentra en la lista.", "error");
         return;
     }
 
     amigos.push(nombreAmigo);
     inputAmigo.value = "";
     actualizarListaAmigos();
-    mostrarNotificacion("Amigo agregado correctamente.", "success");
+    mostrarNotificacion("Nombre agregado correctamente.", "success");
 }
 
 function actualizarListaAmigos() {
@@ -74,95 +74,80 @@ function actualizarListaAmigos() {
 
 function sortearAmigo() {
     if (amigos.length === 0) {
-        mostrarNotificacion("No hay amigos en la lista para sortear.", "error");
+        mostrarNotificacion("No hay nombres en la lista para sortear.", "error");
         return;
     }
 
-    // Reproducir el sonido de ganador
-    const sonidoGanador = document.getElementById("sonidoGanador");
-    sonidoGanador.play();
-
-    // Filtrar amigos que no han sido sorteados
+    // Filtrar disponibles
     const amigosDisponibles = amigos.filter((amigo) => !amigosSorteados.includes(amigo));
 
     if (amigosDisponibles.length === 0) {
         mostrarNotificacion("Todos los amigos han sido sorteados. El juego ha terminado.", "success");
 
-        // Cambiar el botón a "Nuevo Sorteo"
         cambiarBotonANuevoSorteo();
         return;
     }
 
     const resultado = document.getElementById("resultado");
 
-    // Deshabilitar el campo de entrada y el botón de añadir
+    // Deshabilitar campo y botón
     document.getElementById("amigo").disabled = true;
     document.querySelector(".button-add").disabled = true;
 
-    // Generar un índice aleatorio
+    // Indice
     const indiceFinal = Math.floor(Math.random() * amigosDisponibles.length);
     const amigoSorteado = amigosDisponibles[indiceFinal];
 
     let indiceActual = 0;
-    const velocidad = 100; // Velocidad de cambio de color (en milisegundos)
-    const ciclos = 3; // Número de ciclos completos antes de detenerse
+    const velocidad = 100;
+    const ciclos = 3;
     let totalPasos = ciclos * amigosDisponibles.length + indiceFinal;
 
-    // Obtener los elementos de la lista de amigos disponibles
+    // Elementos de lista
     const listaAmigos = Array.from(document.getElementById("listaAmigos").children).filter(
         (li) => !amigosSorteados.includes(li.textContent)
     );
 
-    // Animación de desplazamiento
     const intervalo = setInterval(() => {
-        // Restablecer el color del amigo anterior
+        
         if (indiceActual > 0) {
             listaAmigos[(indiceActual - 1) % amigosDisponibles.length].classList.remove("amigo-seleccionado");
         }
 
-        // Cambiar el color del amigo actual
+        // Cambiar el color
         listaAmigos[indiceActual % amigosDisponibles.length].classList.add("amigo-seleccionado");
 
-        // Incrementar el índice actual
         indiceActual++;
 
-        // Detener la animación cuando se alcance el amigo seleccionado
         if (indiceActual > totalPasos) {
             clearInterval(intervalo);
 
-            // Agregar el amigo sorteado a la lista de sorteados
             amigosSorteados.push(amigoSorteado);
 
-            // Mostrar el resultado
             resultado.innerHTML = `🎉 El amigo secreto es: <strong>${amigoSorteado}</strong> 🎉`;
             mostrarNotificacion(`El amigo secreto es: ${amigoSorteado}`, "success");
 
-            // Actualizar la lista de amigos
             actualizarListaAmigos();
 
-            // Verificar si todos los amigos han sido sorteados
             if (amigosSorteados.length === amigos.length) {
-                mostrarNotificacion("Todos los amigos han sido sorteados. El juego ha terminado.", "success");
+                mostrarNotificacion("Todos los nombres han sido sorteados. El juego se ha terminado.", "success");
                 cambiarBotonANuevoSorteo();
             }
         }
     }, velocidad);
 }
 
-// Función para cambiar el botón a "Nuevo Sorteo"
 function cambiarBotonANuevoSorteo() {
     const botonSortear = document.querySelector(".button-draw");
     botonSortear.textContent = "Nuevo Sorteo";
     botonSortear.onclick = reiniciarJuego;
 
-    // Mantener el diseño original del botón
     const icono = document.createElement("img");
     icono.src = "assets/reiniciar.png";
     icono.alt = "Ícono para reiniciar";
     botonSortear.prepend(icono);
 }
 
-// Función para reiniciar el juego
 function reiniciarJuego() {
     amigos = [];
     amigosSorteados = [];
@@ -172,7 +157,6 @@ function reiniciarJuego() {
     document.getElementById("listaAmigos").innerHTML = "";
     document.getElementById("resultado").innerHTML = "";
 
-    // Cambiar el botón de nuevo a "Sortear amigo"
     const botonSortear = document.querySelector(".button-draw");
     botonSortear.textContent = "Sortear amigo";
     botonSortear.onclick = sortearAmigo;
@@ -182,5 +166,5 @@ function reiniciarJuego() {
     icono.alt = "Ícono para sortear";
     botonSortear.prepend(icono);
 
-    mostrarNotificacion("El juego ha sido reiniciado.", "success");
+    mostrarNotificacion("El juego se ha reiniciado.", "success");
 }
