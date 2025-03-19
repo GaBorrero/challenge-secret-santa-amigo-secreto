@@ -8,18 +8,18 @@ function mostrarNotificacion(mensaje, tipo = "info") {
     const notificacion = document.createElement("div");
     notificacion.classList.add("notificacion");
 
-    // Seleccionar el sonido según el tipo
-    //const sonidoExito = document.getElementById("sonidoExito");
-    //const sonidoError = document.getElementById("sonidoError");
+    // Seleccionar sonido
+    const sonidoExito = document.getElementById("sonidoExito");
+    const sonidoError = document.getElementById("sonidoError");
 
     if (tipo === "error") {
         notificacion.style.backgroundColor = "#FFCCCC";
         notificacion.style.color = "#D8000C";
-        sonidoError.play(); // Reproducir sonido de error
+        sonidoError.play();
     } else if (tipo === "success") {
         notificacion.style.backgroundColor = "#DFF2BF";
         notificacion.style.color = "#4F8A10";
-        sonidoExito.play(); // Reproducir sonido de éxito
+        sonidoExito.play();
     }
 
     notificacion.innerHTML = `
@@ -86,9 +86,9 @@ function sortearAmigo() {
         return;
     }
 
-    // Reproducir el sonido de ganador
-    //const sonidoGanador = document.getElementById("sonidoGanador");
-    //sonidoGanador.play();
+    // Reproducir sonido
+    const sonidoGanador = document.getElementById("sonidoGanador");
+    sonidoGanador.play();
 
     // Filtrar nombres no sorteados
     const amigosDisponibles = amigos.filter((amigo) => !amigosSorteados.includes(amigo));
